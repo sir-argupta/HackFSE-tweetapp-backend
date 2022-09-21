@@ -1,5 +1,4 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
+
 
 name: Build and deploy JAR app to Docker Hub - TweetApp-HackFSE-Backend
 
@@ -27,6 +26,7 @@ jobs:
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
         tags: latest
+        image: sirargupta/api-tweetapp-hackfse
         registry: docker.io
         dockerfile: Dockerfile
         username: ${{ secrets.DOCKERHUB_USERNAME }}
